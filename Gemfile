@@ -10,6 +10,9 @@ gem "jbuilder", "~> 2.0"
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "figaro"
 gem "skylight"
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   gem "byebug"
@@ -17,12 +20,7 @@ group :development, :test do
   gem "spring"
   gem "better_errors"
   gem "binding_of_caller"
-end
-
-group :test, :development do
   gem "rspec-rails"
   gem "capybara"
   gem "pry-rails"
 end
-
-
