@@ -13,6 +13,7 @@ gem "skylight"
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
+gem "omniauth-github"
 
 group :development, :test do
   gem "byebug"
