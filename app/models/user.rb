@@ -19,6 +19,6 @@ class User < ActiveRecord::Base
   end
 
   def public_repos
-    @public_repos ||= JSON.parse(request_user.body, { symbolize_names: true })
+    @public_repos ||= JSON.parse(request_user.body, symbolize_names: true)
   end
 end
