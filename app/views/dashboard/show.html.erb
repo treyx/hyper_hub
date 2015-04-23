@@ -191,5 +191,8 @@
 </div><!--/.container-->
 
 <footer>
+  <% @current_user.parse_repo.each do |repo| %>
+    <%= repo[:name] %>
+  <% end %>
   <p class="pull-right"><a href="http://www.github.com/treyx">Trey Tomlinson</a> &nbsp; Extra Text</p>
 </footer>
