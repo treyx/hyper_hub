@@ -14,6 +14,8 @@ gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "omniauth-github"
+gem "faraday"
+gem "d3-rails"
 
 group :development, :test do
   gem "byebug"
