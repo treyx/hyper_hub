@@ -27,4 +27,5 @@ group :development, :test do
   gem "capybara"
   gem "pry-rails"
   gem "awesome_print"
+  gem "simplecov", :require => false
 end
