@@ -25,4 +25,3 @@ def mock_omniauth_user
     }
   })
 end
-
