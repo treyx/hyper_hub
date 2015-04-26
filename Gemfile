@@ -15,7 +15,7 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "omniauth-github"
 gem "faraday"
-gem "d3-rails"
+gem "angularjs-rails"
 
 group :development, :test do
   gem "byebug"
