@@ -4,6 +4,4 @@ class ReposController < ApplicationController
   def index
     respond_with Repo.public_repos
   end
-
-
 end

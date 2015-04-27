@@ -1,5 +1,4 @@
 class Repo < ActiveRecord::Base
-
   def self.request_user
     Faraday.get "https://api.github.com/repositories"
   end
