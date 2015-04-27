@@ -1,5 +1,6 @@
 <div class="container-fluid">
 
+
       <div class="row row-offcanvas row-offcanvas-left">
 
          <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
@@ -191,8 +192,19 @@
 </div><!--/.container-->
 
 <footer>
-  <% @current_user.parse_repo.each do |repo| %>
-    <%= repo[:name] %>
-  <% end %>
+<div class="container-fluid">
+<h1>Watchlist</h1>
+<form>
+  <input type="text" ng-model='newSymbol' placeholder="Enter a symbol">
+  <input type="submit" value="Add">
+</form>
+{{newSymbol}}
+<div ng-controller="ReposCtrl">
+  <ul>
+    <li ng-repeat="repo in repos">
+      {{repo.owner}}, {{repo.name}}
+    </li>
+  </ul>
+</div>
   <p class="pull-right"><a href="http://www.github.com/treyx">Trey Tomlinson</a> &nbsp; Extra Text</p>
 </footer>
