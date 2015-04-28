@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  scope :api do
-    resources :repos, only: [:index], defaults: { format: :json }
+  namespace :api do
+    namespace :v1 do
+      resources :repos, only: [:index], defaults: { format: :json }
+    end
   end
   root "home#index"
   get "/dashboard", to: "home#show"

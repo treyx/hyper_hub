@@ -1,4 +1,4 @@
-class ReposController < ApplicationController
+class Api::V1::ReposController < ApplicationController
   respond_to :json
 
   def index
