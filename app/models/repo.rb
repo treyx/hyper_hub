@@ -1,9 +1,16 @@
 class Repo < ActiveRecord::Base
-  def self.request_user
-    Faraday.get "https://api.github.com/repositories"
+
+  def self.find_repo
+    Faraday.get "https://api.github.com/repos/treyx/hyperhub"
   end
 
-  def self.public_repos
-    @public_repos ||= JSON.parse(request_user.body, symbolize_names: true)
+  def self.parse_repo
+    repository = find_repo
+    JSON.parse(repository.body, symbolize_names: true)
   end
+
+  # def self.repo_contributors(owner, repo)
+  #   Faraday.get "https://api.github.com/repos/#{owner}/#{repo}/stats/contributors"
+  # end
+
 end
