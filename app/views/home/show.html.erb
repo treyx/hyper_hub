@@ -204,7 +204,13 @@
     <li ng-repeat="repo in repos">
       {{repo.name}}
     </li>
+
   </ul>
 </div>
+
+<div ng-controller="donutChartCtrl">
+    <nvd3 options="options" data="data"></nvd3>
+</div>
+
   <p class="pull-right"><a href="http://www.github.com/treyx">Trey Tomlinson</a> &nbsp; Extra Text</p>
 </footer>
