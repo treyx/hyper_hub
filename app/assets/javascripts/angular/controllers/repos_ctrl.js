@@ -1,4 +1,3 @@
-app.controller('ReposCtrl', ['$scope', '$resource', function($scope, $resource) {
-  var Repos = $resource('/api/repos');
-  $scope.repos = Repos.query();
+app.controller('ReposCtrl', ['$scope', 'Repo', function($scope, Repo) {
+  $scope.repos = Repo.all();
 }]);
