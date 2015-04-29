@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require twitter/bootstrap
-//= require jquery
 //= require angular
 //= require angular-resource
 //= require main.js
