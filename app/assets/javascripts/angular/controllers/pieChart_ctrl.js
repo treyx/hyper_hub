@@ -1,8 +1,8 @@
-app.controller('pieChartCtrl', function($scope){
+app.controller("pieChartCtrl", function($scope){
 
         $scope.options = {
             chart: {
-                type: 'pieChart',
+                type: "pieChart",
                 height: 200,
                 width: 200,
                 x: function(d){return d.key;},
