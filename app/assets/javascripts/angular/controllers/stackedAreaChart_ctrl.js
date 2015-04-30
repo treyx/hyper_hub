@@ -1,8 +1,9 @@
-app.controller('donutChartCtrl', function($scope){
+app.controller('stackedAreaChart', function($scope){
 $scope.options = {
             chart: {
                 type: 'stackedAreaChart',
                 height: 450,
+                width: 900,
                 margin : {
                     top: 20,
                     right: 20,
@@ -13,10 +14,10 @@ $scope.options = {
                 y: function(d){return d[1];},
                 useVoronoi: false,
                 clipEdge: true,
-                transitionDuration: 500,
+                transitionDuration: 4000,
                 useInteractiveGuideline: true,
                 xAxis: {
-                    showMaxMin: false,
+                    showMaxMin: true,
                     tickFormat: function(d) {
                         return d3.time.format('%x')(new Date(d))
                     }

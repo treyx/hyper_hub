@@ -1,3 +1,3 @@
 app.controller('ReposCtrl', ['$scope', 'Repo', function($scope, Repo) {
-  $scope.repos = Repo.all();
+  $scope.getRepoData = Repo.getRepoData($scope.searchUser, $scope.searchRepo);
 }]);
