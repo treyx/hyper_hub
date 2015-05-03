@@ -5,8 +5,8 @@ class RepoService
     @connection = Faraday.new(url: "https://api.github.com/repos")
   end
 
-  def self.find_repo(owner, repo)
-    parse(connection.get("#{owner}/#{repo}").body, symbolize_names: true)
+  def find_repo(owner, repo)
+    parse(connection.get("#{owner}/#{repo}"))
   end
 
   def parse(response)
