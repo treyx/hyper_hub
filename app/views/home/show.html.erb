@@ -7,11 +7,12 @@
       <ul class="nav nav-sidebar">
         <li class="active"><a href="#">Add a Repository</a></li>
         <br>
-        <form ng-submit="getRepoData()">
-          <input ng-model="searchUser" class="form-control" placeholder="User"></input>
-          <input ng-model="searchRepo" class="form-control" placeholder="Repository"></input>
-          <input type="submit" value="Add Repository">
-        </form>
+        <div ng-controller="ReposCtrl" >
+          <input type="text" ng-model="searchUser" placeholder="Github username...">
+          <input type="text" ng-model="searchRepo" placeholder="Github repo...">
+          <a href="#" ng-click="search(searchUser,searchRepo)">Pull User Data</a>
+        </div>
+
       </ul>
       <ul class="nav nav-sidebar">
         <li class="active"><a href="">Nav item again</a></li>
@@ -78,5 +79,13 @@
 </div><!--/.container-->
 
 <footer>
+
+  <div ng-controller="ReposCtrl">
+  <ul>
+    <li ng-repeat="repo in repos">
+      {{repo.name}}
+    </li>
+  </ul>
+
   <p class="pull-right"><a href="http://www.github.com/treyx">Trey Tomlinson</a> &nbsp; Extra Text</p>
 </footer>
