@@ -16,6 +16,7 @@ gem "omniauth-github"
 gem "faraday"
 gem "angularjs-rails"
 gem "responders"
+gem "vcr"
 
 group :development, :test do
   gem "byebug"
