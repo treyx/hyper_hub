@@ -1,5 +1,6 @@
-app.service("RepoSearch", function($http) {
-  this.search = function(user, repo) {
-      return $http.get(‘/api/v1/repos’, { user: user, repo: repo });
-  }
+app.service("RepoSearch", function($http){
+ var url= "/api/v1/repos"
+ this.search = function(repo,user){
+     return $http.get(url+"?user="+user+"&repo="+repo);
+ }
 });
