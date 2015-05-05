@@ -5,7 +5,7 @@ require "vcr"
 VCR.configure do |c|
   c.hook_into :faraday
   c.cassette_library_dir = "spec/support/vcr_cassettes"
-  c.default_cassette_options = {:record => :new_episodes}
+  c.default_cassette_options = { record: :new_episodes }
 end
 
 RSpec.configure do |config|
