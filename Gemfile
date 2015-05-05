@@ -13,11 +13,12 @@ gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "omniauth-github"
-gem "faraday"
+gem "faraday", "< 0.9.0"
 gem "angularjs-rails"
 gem "responders"
 
 group :development, :test do
+  gem "vcr"
   gem "byebug"
   gem "web-console", "~> 2.0"
   gem "spring"
