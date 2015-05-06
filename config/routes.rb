@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :repos, only: [:index], defaults: { format: :json }
+      resources :commits, only: [:index], defaults: { format: :json }
     end
   end
   root "home#index"
