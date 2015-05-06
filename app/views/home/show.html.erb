@@ -69,9 +69,19 @@
           <hr>
 
           <h2 class="sub-header">Section title</h2>
-            <div ng-controller="stackedAreaChart">
-              <nvd3 options="options" data="data"></nvd3>
+            <div ng-controller="ReposCtrl">
+              <nvd3-multi-bar-chart
+                data="exampleData"
+                id="exampleId"
+                xAxisTickFormat="xAxisTickFormatFunction()"
+                width="1000"
+                height="350"
+                showXAxis="false"
+                showYAxis="true">
+                <svg></svg>
+              </nvd3-multi-bar-chart>
             </div>
+
 
     </div><!--/row-->
   </div>
@@ -79,13 +89,8 @@
 </div><!--/.container-->
 
 <footer>
-
-  <div ng-controller="ReposCtrl">
-  <ul>
-    <li ng-repeat="repo in repos">
-      {{repo.name}}
-    </li>
-  </ul>
-
   <p class="pull-right"><a href="http://www.github.com/treyx">Trey Tomlinson</a> &nbsp; Extra Text</p>
 </footer>
+
+
+
