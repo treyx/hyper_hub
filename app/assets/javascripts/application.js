@@ -17,5 +17,5 @@
 //= require_tree ./angular
 //= require_tree ./d3
 //= require_tree ./nvd3
-//= require_tree ./angularjs-nvd3-directives
+//= require_tree ./angular-nvd3
 //= require_tree .
