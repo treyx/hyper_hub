@@ -1,7 +1,7 @@
 class Repo
 
   def self.service
-    @service ||= RepoService.new
+    @service ||= GitService.new
   end
 
   def self.find_repository(owner, repo)
