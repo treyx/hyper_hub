@@ -1,1 +1,1 @@
-var app = angular.module("hyperhub", ['ngResource', 'nvd3']);
+var app = angular.module("hyperhub", ["nvd3"]);

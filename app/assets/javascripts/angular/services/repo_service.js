@@ -1,9 +1,6 @@
-app.service("RepoSearch", function($resource){
-
-  var RepoSearch = $resource("/api/v1/repos", {user: "@searchUser", repo: "@searchRepo"});
-
-  this.search = function(){
-      return RepoSearch.query(@searchUser);
-  }
-
+app.service("RepoSearch", function($http){
+ var url= "/api/v1/repos"
+ this.search = function(repo,user){
+     return $http.get(url+"?user="+user+"&repo="+repo);
+ }
 });

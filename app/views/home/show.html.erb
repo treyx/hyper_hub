@@ -8,9 +8,9 @@
         <li class="active"><a href="#">Add a Repository</a></li>
         <br>
         <div ng-controller="ReposCtrl" >
-          <input type="text" ng-model="searchUser" placeholder="Github username...">
-          <input type="text" ng-model="searchRepo" placeholder="Github repo...">
-          <a href="#" ng-click="search(searchUser,searchRepo)">Pull User Data</a>
+          <input type="text" ng-model="user" placeholder="Github username...">
+          <input type="text" ng-model="repo" placeholder="Github repo...">
+          <a href="#" ng-click="search(user,repo)">Pull User Data</a>
         </div>
 
       </ul>
