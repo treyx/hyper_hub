@@ -1,1 +1,1 @@
-var app = angular.module("hyperhub", ["nvd3"]);
+var app = angular.module("hyperhub", ["nvd3ChartDirectives"]);
