@@ -5,8 +5,8 @@ class GitService
     @connection = Faraday.new(url: "https://api.github.com/repos")
   end
 
-  def find_repo(owner, repo)
-    parse(connection.get("#{owner}/#{repo}"))
+  def find_repo(owner, repo, token)
+    parse(connection.get("#{owner}/#{repo}?access_token=#{token}"))
   end
 
   def find_commit_history(owner, repo)
