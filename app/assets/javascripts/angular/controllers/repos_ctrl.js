@@ -46,11 +46,11 @@ app.controller("ReposCtrl", ["GitSearch", "$scope", function(GitSearch, $scope) 
     chart: {
         type: "pieChart",
         height: 200 ,
-        // width: 200,
         x: function(d){return d.key;},
         y: function(d){return d.y;},
         showLabels: true,
-        transitionDuration: 500,
+        noData: "Add A Repository",
+        transitionDuration: 5000,
         labelThreshold: 0.01,
         showLegend: true
     }
@@ -68,14 +68,15 @@ app.controller("ReposCtrl", ["GitSearch", "$scope", function(GitSearch, $scope) 
           },
           clipEdge: true,
           staggerLabels: true,
-          transitionDuration: 500,
+          transitionDuration: 700,
           stacked: true,
+          noData: "Add A Repository",
           xAxis: {
-              axisLabel: 'Week',
               showMaxMin: false,
               tickFormat: function(d){
-                    return d3.format(',f')(d);
+                return d3.time.format('%d-%b')(new Date(d * 1000));
               }
+
           },
           yAxis: {
               axisLabel: 'Number of Commits',
