@@ -4,7 +4,7 @@ class Repo
     @service ||= GitService.new
   end
 
-  def self.find_repository(owner, repo)
-    service.find_repo(owner, repo)
+  def self.find_repository(owner, repo, token)
+    service.find_repo(owner, repo, token)
   end
 end
