@@ -9,10 +9,10 @@
         <br>
 
         <div class="form-group">
-          <input type="text" class="form-control" ng-model="user" placeholder="Github username...">
-          <input type="text" class="form-control" ng-model="repo" placeholder="Github repo...">
-          <li><a href="#" ng-click="searchCommits(user,repo); searchRepo(user,repo)">Pull User Data</a></li>
+          <input type="text" class="form-control" ng-model="user" placeholder="Repo Owner...">
+          <input type="text" class="form-control" ng-model="repo" placeholder="Repo Name...">
         </div>
+        <li><a href="#" ng-click="searchCommits(user,repo); searchRepo(user,repo)">Pull Repo Data</a></li>
 
       </ul>
 
@@ -34,42 +34,38 @@
         HyperHub
       </h1>
 
-      <div class="row">
+      <div class="row" >
         <div class="col-xs-6 col-sm-3 text-center">
             <nvd3 options="pieOptions" data="stars" ></nvd3>
-            <h4>Stars</h4>
+            <h4 ng-show="forks.length">Stars</h4>
             <span class="text-muted"></span>
         </div>
         <div class="col-xs-6 col-sm-3 placeholder text-center">
             <nvd3 options="pieOptions" data="forks"></nvd3>
-            <h4>Pie-Graph 1</h4>
-            <span class="text-muted">Forks</span>
+            <h4 ng-show="forks.length">Forks</h4>
         </div>
         <div class="col-xs-6 col-sm-3 placeholder text-center">
             <nvd3 options="pieOptions" data="size"></nvd3>
-            <h4>Pie-Graph 1</h4>
-            <span class="text-muted">Size</span>
+            <h4 ng-show="forks.length">Project Size</h4>
         </div>
         <div class="col-xs-6 col-sm-3 placeholder text-center">
             <nvd3 options="pieOptions" data="issues"></nvd3>
-            <h4>Open Issues</h4>
-            <span class="text-muted">Popular Repos Today - forks</span>
+            <h4 ng-show="forks.length">Open Issues</h4>
         </div>
 
       </div><!--/row-->
 
           <hr>
-          <h2 class="sub-header">Section title</h2>
-
-          <nvd3 options="barOptions" data="commitHistory" ></nvd3>
+          <h2 class="sub-header text-center">Commits in Last Year</h2>
+          <br>
+          <nvd3 options="barOptions" data="commitHistory"></nvd3>
     </div><!--/row-->
   </div>
 
 </div><!--/.container-->
 
 <footer>
-<a href ng-click="hideSidebar = !hideSidebar">Hide Sidebar</a>
-  <p class="pull-right"><a href="http://www.github.com/treyx">Trey Tomlinson</a> &nbsp; Extra Text</p>
+  <p class="pull-right"><a href="http://www.github.com/treyx">Trey Tomlinson</a></p>
 </footer>
 
 
