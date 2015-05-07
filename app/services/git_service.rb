@@ -9,8 +9,8 @@ class GitService
     parse(connection.get("#{owner}/#{repo}?access_token=#{token}"))
   end
 
-  def find_commit_history(owner, repo)
-    parse(connection.get("#{owner}/#{repo}/stats/commit_activity"))
+  def find_commit_history(owner, repo, token)
+    parse(connection.get("#{owner}/#{repo}/stats/commit_activity?access_token=#{token}"))
   end
 
   def parse(response)
