@@ -16,8 +16,8 @@
 //= require angular
 //= require angular-resource
 //= require main.js
-//= require_tree ./angular
 //= require_tree ./d3
 //= require_tree ./nvd3
 //= require_tree ./angular-nvd3
+//= require_tree ./angular
 //= require_tree .
