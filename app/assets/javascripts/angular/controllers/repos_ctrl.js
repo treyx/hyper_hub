@@ -29,7 +29,6 @@ app.controller("ReposCtrl", ["GitSearch", "$scope", function(GitSearch, $scope) 
       }
       $scope.commitHistory.push({key: repo, values: obj});
   });
-    // var date = new Date(data[0].week * 1000);
 
   };
 
