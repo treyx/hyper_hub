@@ -18,7 +18,6 @@ app.controller("ReposCtrl", ["GitSearch", "$scope", function(GitSearch, $scope) 
     });
   };
 
-
   $scope.searchCommits = function(user,repo) {
     GitSearch.searchCommits(user,repo).success(function(data){
 
@@ -42,49 +41,49 @@ app.controller("ReposCtrl", ["GitSearch", "$scope", function(GitSearch, $scope) 
     return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i];
   };
 
-        $scope.pieOptions = {
-            chart: {
-                type: "pieChart",
-                height: 200 ,
-                // width: 200,
-                x: function(d){return d.key;},
-                y: function(d){return d.y;},
-                showLabels: true,
-                transitionDuration: 500,
-                labelThreshold: 0.01,
-                showLegend: true
-            }
-        };
 
-        $scope.barOptions = {
-            chart: {
-                type: 'multiBarChart',
-                height: 450,
-                margin : {
-                    top: 20,
-                    right: 20,
-                    bottom: 60,
-                    left: 45
-                },
-                clipEdge: true,
-                staggerLabels: true,
-                transitionDuration: 500,
-                stacked: true,
-                xAxis: {
-                    axisLabel: 'Week',
-                    showMaxMin: false,
-                    tickFormat: function(d){
-                        return d3.format(',f')(d);
-                    }
-                },
-                yAxis: {
-                    axisLabel: 'Number of Commits',
-                    axisLabelDistance: 40,
-                    tickFormat: function(d){
-                        return d3.format(',.1f')(d);
-                    }
-                }
-            }
-        };
+  $scope.pieOptions = {
+    chart: {
+        type: "pieChart",
+        height: 200 ,
+        // width: 200,
+        x: function(d){return d.key;},
+        y: function(d){return d.y;},
+        showLabels: true,
+        transitionDuration: 500,
+        labelThreshold: 0.01,
+        showLegend: true
+    }
+  };
 
+  $scope.barOptions = {
+      chart: {
+          type: 'multiBarChart',
+          height: 450,
+          margin : {
+            top: 20,
+            right: 20,
+            bottom: 60,
+            left: 45
+          },
+          clipEdge: true,
+          staggerLabels: true,
+          transitionDuration: 500,
+          stacked: true,
+          xAxis: {
+              axisLabel: 'Week',
+              showMaxMin: false,
+              tickFormat: function(d){
+                    return d3.format(',f')(d);
+              }
+          },
+          yAxis: {
+              axisLabel: 'Number of Commits',
+              axisLabelDistance: 40,
+              tickFormat: function(d){
+                      return d3.format(',.1f')(d);
+              }
+          }
+      }
+  };
 }]);
