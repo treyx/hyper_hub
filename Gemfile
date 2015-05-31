@@ -8,7 +8,7 @@ gem "jquery-rails"
 gem "jbuilder", "~> 2.0"
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "figaro"
-gem "skylight"
+gem "newrelic_rpm"
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
@@ -19,7 +19,6 @@ gem "responders"
 
 group :development, :test do
   gem "vcr"
-  gem "byebug"
   gem "web-console", "~> 2.0"
   gem "spring"
   gem "better_errors"
