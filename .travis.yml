@@ -1,0 +1,19 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.2.1
+env:
+- DB=postgresql
+script:
+- RAILS_ENV=test bundle exec rake db:test:prepare --trace
+- bundle exec rspec spec/
+before_script:
+- psql -c 'create database my_app_test' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: itEXfUfmhCrPPx9Xdh3tNVHxcUd9BoZvpa80kh2pMRfLZh1tmWdQEqafVE2rk4AKgzvMNgjcOy4mCZHIoRVbKUJiZYmRUNE6dXUQneIVuIV8XFBDOzSObKaVCp43ZKNLbT53IuOaKVtzP860FClkKudwm86UJhXTovk3KRpJoqc=
+  run: "rake db:migrate"
+  app: hyperhub
+  on:
+    repo: treyx/hyperhub
