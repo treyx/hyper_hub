@@ -1,6 +1,6 @@
 ## HyperHub
 
-HyperHub is a data visualization tool for GitHub repositories.
+HyperHub is a data visualization tool for GitHub repositories. It uses Rails and AngularJS to chart information about specific repositories.
 
 [HyperHub on Heroku](https://hyperhub.herokuapp.com/)
 
