@@ -1,8 +1,17 @@
+body {
+  background-color:#000000;
+  padding-top: 50px;
+}
+
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .landing-page-body {
   margin: 0 auto;
   width: 100%;
   min-height:100%;
-  background-color:#000000;
   color:#eee;
   overflow:hidden;
 }
@@ -11,29 +20,10 @@
   margin-top:7%;
 }
 
-/*
- * Style tweaks
- * --------------------------------------------------
- */
-
 .navbar-inverse {
     background-color: black;
 }
 
-body {
-  padding-top: 50px;
-  background-color: #f5f5f5;
-}
-footer {
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #fff;
-}
-
-/*
- * Off Canvas
- * --------------------------------------------------
- */
 @media screen and (max-width: 768px) {
   .row-offcanvas {
     position: relative;
@@ -59,10 +49,7 @@ footer {
   }
 }
 
-
-/* Sidebar navigation */
 .nav-sidebar {
-  background-color: #f5f5f5;
   margin-right: -15px;
   margin-bottom: 20px;
   margin-left: -15px;
@@ -76,9 +63,9 @@ footer {
   background-color: black;
 }
 
-/*
- * Main content
- */
+.row-offcanvas {
+  background-color: #E8E8E8;
+}
 
 .main {
   padding: 20px;
@@ -105,4 +92,3 @@ footer {
 .angular-link:hover {
     background-color: white;
 }
-
